@@ -31,13 +31,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 6,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -64,7 +64,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/MyGithub/mathematical-expression-cpp/include"
+					"path" : "D:/MyGitHub/mathematical-expression-cpp/include"
 				}
 			],
 			"language" : "CXX",
@@ -118,7 +118,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -127,12 +128,17 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/core/Mathematical_Expression.cpp",
+			"path" : "src/core/container/CalculationResults.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/Mathematical_Expression.h",
+			"path" : "include/CalculationResults.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/Utils.h",
 			"sourceGroupIndex" : 1
 		}
 	],
