@@ -49,13 +49,77 @@ cmake_ninja_workdir = D$:/MyGithub/mathematical-expression-cpp/cmake-build-debug
 
 build cmake_object_order_depends_target_mathematical_expression_cpp: phony || CMakeFiles/mathematical_expression_cpp.dir
 
-build CMakeFiles/mathematical_expression_cpp.dir/src/core/Mathematical_Expression.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/Mathematical_Expression.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/container/CalculationResults.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
   DEFINES = -Dmathematical_expression_cpp_EXPORTS
-  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\Mathematical_Expression.cpp.obj.d
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\container\CalculationResults.cpp.obj.d
   FLAGS = -g -std=gnu++11
   INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
   OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
-  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\container
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/manager/CalculationManagement.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\manager\CalculationManagement.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\manager
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/calculation/PrefixExpressionOperation.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\PrefixExpressionOperation.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/exceptional/MExceptional.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/exceptional/MExceptional.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\exceptional\MExceptional.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\exceptional
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/utils/NumberUtils.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/utils/NumberUtils.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\utils\NumberUtils.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\utils
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/utils/StrUtils.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\utils\StrUtils.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\utils
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/dataContainer/MEStack.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/dataContainer/MEStack.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\dataContainer\MEStack.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\dataContainer
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/NumberCalculation.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/calculation/NumberCalculation.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\NumberCalculation.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/calculation/Calculation.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\Calculation.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation
 
 
 # =============================================================================
@@ -65,7 +129,7 @@ build CMakeFiles/mathematical_expression_cpp.dir/src/core/Mathematical_Expressio
 #############################################
 # Link the shared library libmathematical_expression_cpp.dll
 
-build libmathematical_expression_cpp.dll libmathematical_expression_cpp.dll.a: CXX_SHARED_LIBRARY_LINKER__mathematical_expression_cpp_Debug CMakeFiles/mathematical_expression_cpp.dir/src/core/Mathematical_Expression.cpp.obj
+build libmathematical_expression_cpp.dll libmathematical_expression_cpp.dll.a: CXX_SHARED_LIBRARY_LINKER__mathematical_expression_cpp_Debug CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/exceptional/MExceptional.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/NumberUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/dataContainer/MEStack.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/NumberCalculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir

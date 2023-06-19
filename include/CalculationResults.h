@@ -38,6 +38,22 @@ namespace ME {
          * @return 计算结果的来源
          */
         virtual string getCalculationSourceName() = 0;
+
+        /**
+         * 从结果数据对象中提取出指定的数据
+         * <p>
+         * Extract the specified data from the result data object
+         * @return 当前结果存储对象中存储的结果数值。
+         *
+         * The result value stored in the current result storage object.
+         */
+        virtual double getResult_double() const = 0;
+
+        bool operator==(const CalculationResults &other) const {
+            return this->getResult_double() == other.getResult_double();
+        }
+
+        size_t operator()(CalculationResults &r) const;
     };
 
     /**
@@ -49,7 +65,7 @@ namespace ME {
      */
     class CalculationNumberResults : public CalculationResults {
     private:
-        const int result;
+        const double result;
         const int result_layers;
         const string source;
 
@@ -66,7 +82,7 @@ namespace ME {
          *                <p>
          *                Source indicates the calculation source of the result object.
          */
-        CalculationNumberResults(int result_layers, int result, string source);
+        CalculationNumberResults(int result_layers, double result, string source);
 
     public:
         int getResultLayers() override;
@@ -81,7 +97,17 @@ namespace ME {
          *
          * The result value stored in the current result storage object.
          */
-        int getResult() const;
+        double getResult_double() const override;
+
+        /**
+         * 从结果数据对象中提取出指定的数据
+         * <p>
+         * Extract the specified data from the result data object
+         * @return 当前结果存储对象中存储的结果数值。
+         *
+         * The result value stored in the current result storage object.
+         */
+        double getResult() const;
 
         /**
          * 清理类中的所有成员在内存中的占用
@@ -101,6 +127,8 @@ namespace ME {
         bool operator==(const CalculationNumberResults &rhs) const;
 
         bool operator!=(const CalculationNumberResults &rhs) const;
+
+        size_t operator()(const CalculationNumberResults &person) const;
     };
 
     /**
@@ -145,6 +173,16 @@ namespace ME {
          * <p>
          * The result value stored in the current result storage object.
          */
+        double getResult_double() const override;
+
+        /**
+         * 从结果数据对象中提取出指定的数据
+         * <p>
+         * Extract the specified data from the result data object
+         * @return 当前结果存储对象中存储的结果数值。
+         * <p>
+         * The result value stored in the current result storage object.
+         */
         bool getResult() const;
 
         /**
@@ -156,70 +194,30 @@ namespace ME {
          * @return 从布尔结果数值中获取到 左值。
          */
         double getRight() const;
+
+        bool operator==(const CalculationBooleanResults &other) const;
+
+        bool operator!=(const CalculationBooleanResults &other) const;
+
+        size_t operator()(const CalculationBooleanResults &person) const;
     };
 
 
-    ME::CalculationNumberResults *operator+(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() + v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
+    CalculationNumberResults operator+(CalculationNumberResults v1, CalculationNumberResults v2);
 
-    ME::CalculationNumberResults *operator-(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() - v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
+    CalculationNumberResults operator-(CalculationNumberResults v1, CalculationNumberResults v2);
 
-    ME::CalculationNumberResults *operator*(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() * v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
+    CalculationNumberResults operator*(CalculationNumberResults v1, CalculationNumberResults v2);
 
-    ME::CalculationNumberResults *operator/(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() / v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
+    CalculationNumberResults operator/(CalculationNumberResults v1, CalculationNumberResults v2);
 
-    ME::CalculationNumberResults *operator<<(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() + v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
+    CalculationNumberResults operator<<(CalculationNumberResults v1, CalculationNumberResults v2);
 
-    ME::CalculationNumberResults *operator>>(CalculationNumberResults v1, CalculationNumberResults v2) {
-        return new CalculationNumberResults(
-                v1.getResultLayers() + v2.getResultLayers(),
-                v1.getResult() + v2.getResult(),
-                "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
-                v2.getCalculationSourceName() + ')'
-        );
-    }
-}
+    CalculationNumberResults operator>>(CalculationNumberResults v1, CalculationNumberResults v2);
 
-ostream &operator<<(ostream &out, const ME::CalculationNumberResults *rhs) {
-    return out << rhs->getResult();
-}
+    ostream &operator<<(ostream &out, const CalculationNumberResults *rhs);
 
-ostream &operator<<(ostream &out, const ME::CalculationNumberResults &rhs) {
-    return out << rhs.getResult();
+    ostream &operator<<(ostream &out, const CalculationNumberResults &rhs);
 }
 
 #endif //MATHEMATICAL_EXPRESSION_CPP_CALCULATIONRESULTS_H
