@@ -139,7 +139,7 @@ namespace ME {
                 "(CalculationNumberResults." + v1.getCalculationSourceName() + " + CalculationNumberResults." +
                 v2.getCalculationSourceName() + ')'
         };
-    };
+    }
 
     CalculationNumberResults operator/(CalculationNumberResults v1, CalculationNumberResults v2) {
         return {
@@ -167,12 +167,20 @@ namespace ME {
                 v2.getCalculationSourceName() + ')'
         };
     }
+}
 
-    ostream &operator<<(ostream &out, const CalculationNumberResults *rhs) {
-        return out << rhs->getResult_double();
-    }
+ostream &operator<<(ostream &out, const ME::CalculationBooleanResults *rhs) {
+    return out << rhs->getResult();
+}
 
-    ostream &operator<<(ostream &out, const CalculationNumberResults &rhs) {
-        return out << rhs.getResult_double();
-    }
+ostream &operator<<(ostream &out, const ME::CalculationBooleanResults &rhs) {
+    return out << rhs.getResult();
+}
+
+ostream &operator<<(ostream &out, const ME::CalculationNumberResults *rhs) {
+    return out << rhs->getResult();
+}
+
+ostream &operator<<(ostream &out, const ME::CalculationNumberResults &rhs) {
+    return out << rhs.getResult();
 }

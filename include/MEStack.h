@@ -6,6 +6,7 @@
 #define MATHEMATICAL_EXPRESSION_CPP_MESTACK_H
 
 #include <stack>
+#include "iostream"
 
 namespace ME {
 
@@ -16,6 +17,18 @@ namespace ME {
     template<typename T>
     class MEStack : public std::stack<T> {
 
+        friend
+        std::ostream &operator<<(std::ostream &out, const MEStack<int> &meStack);
+
+        friend
+        std::ostream &operator<<(std::ostream &out, const MEStack<double> &meStack);
+
+        friend
+        std::ostream &operator<<(std::ostream &out, const MEStack<char> &meStack);
+
+        friend
+        std::ostream &operator<<(std::ostream &out, const MEStack<std::string> &meStack);
+
     public:
         T get(int index);
     };
@@ -24,6 +37,7 @@ namespace ME {
     T MEStack<T>::get(int index) {
         return this->c[index];
     }
+
 
 } // ME
 

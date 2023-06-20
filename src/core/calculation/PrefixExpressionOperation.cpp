@@ -14,7 +14,7 @@ namespace ME {
     const std::regex REGULAR_ADDITION_SUBTRACTION_AMBIGUITY_REX(REGULAR_ADDITION_SUBTRACTION_AMBIGUITY);
 
     std::string PrefixExpressionOperation::formatStr(std::string string) {
-        return std::regex_replace(string, REGULAR_ADDITION_SUBTRACTION_AMBIGUITY_REX, MINUS_SIGN_STR);
+        return std::regex_replace(string, REGULAR_ADDITION_SUBTRACTION_AMBIGUITY_REX, MINUS_SIGN_STR) + " + 0";
     }
 
 
@@ -59,10 +59,8 @@ namespace ME {
         // 创建操作数栈
         ME::MEStack<char> characterStack;
         // 开始格式化，将符号与操作数进行分类
-        unsigned long long length = newFormula.length();
         std::string stringBuilder;
-        for (int i = 0; i < length; i++) {
-            char c = newFormula[i];
+        for (const auto &c: newFormula) {
             if (StrUtils::IsAnOperator(c)) {
                 // 如果是操作符，就先将上一个数值计算出来
                 double number = StrUtils::stringToDouble(stringBuilder);
@@ -78,8 +76,9 @@ namespace ME {
                         char top = characterStack.top();
                         characterStack.pop();
                         // 将上一个优先级高的值 与当下优先级较低的值进行运算，然后将当下的新数值和当下的操作符推到栈顶
-                        doubleStack.push(NumberUtils::calculation(top, doubleStack.top(), number));
+                        double v = doubleStack.top();
                         doubleStack.pop();
+                        doubleStack.push(NumberUtils::calculation(top, v, number));
                         characterStack.push(c);
                     } else {
                         // 反之就将当前运算符提供到栈顶
@@ -98,15 +97,15 @@ namespace ME {
         double res = doubleStack.get(0);
         char back;
         const unsigned long size = doubleStack.size();
-        int layer_num = 0;
         // 开始计算
         const unsigned long sizeD2 = size >> 1;
+        int layer_num = 0;
         for (int i = 1, offset = 0; i < size && offset < sizeD2; ++offset, ++i) {
             // 更新操作符
             back = characterStack.get(offset);
             // 获取操作数并计算结果
             res = NumberUtils::calculation(back, res, doubleStack.get(i));
-            layer_num += 1;
+            ++layer_num;
         }
         // 返回结果
         return {layer_num, res, this->getName()};

@@ -202,6 +202,9 @@ namespace ME {
         size_t operator()(const CalculationBooleanResults &person) const;
     };
 
+    ostream &operator<<(ostream &out, const CalculationBooleanResults *rhs);
+
+    ostream &operator<<(ostream &out, const CalculationBooleanResults &rhs);
 
     CalculationNumberResults operator+(CalculationNumberResults v1, CalculationNumberResults v2);
 
