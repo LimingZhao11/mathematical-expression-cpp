@@ -1,6 +1,6 @@
 # ![image](https://user-images.githubusercontent.com/113756063/203919312-dcec4a61-2136-4af2-a361-66b2ed4e6a54.png) 数学表达式-cpp
 
-- Switch to [English Document](https://github.com/BeardedManZhao/mathematical-expression/blob/main/README.md)
+- Switch to [English Document](https://github.com/BeardedManZhao/mathematical-expression-cpp/blob/main/README.md)
 
 ## 介绍
 
@@ -185,6 +185,6 @@ Active code page: 65001
 更多信息
 
 - date: 2023-06-20
-- Switch to [English Document](https://github.com/BeardedManZhao/mathematical-expression/blob/main/README.md)
+- Switch to [English Document](https://github.com/BeardedManZhao/mathematical-expression-cpp/blob/main/README.md)
 - [mathematical-expression-Java](https://github.com/BeardedManZhao/mathematical-expression.git)
 - [mathematical-expression-py](https://github.com/BeardedManZhao/mathematical-expression-Py)

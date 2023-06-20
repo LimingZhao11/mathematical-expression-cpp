@@ -1,6 +1,6 @@
 # ![image](https://user-images.githubusercontent.com/113756063/203919312-dcec4a61-2136-4af2-a361-66b2ed4e6a54.png) mathematical-expression-cpp
 
-- 切换至 [中文文档](https://github.com/BeardedManZhao/mathematical-expression/blob/main/README-Chinese.md)
+- 切换至 [中文文档](https://github.com/BeardedManZhao/mathematical-expression-cpp/blob/main/README-Chinese.md)
 
 ## introduce
 
@@ -199,7 +199,7 @@ Active code page: 65001
 更多信息
 
 - date: 2023-06-20
-- 切换至 [中文文档](https://github.com/BeardedManZhao/mathematical-expression/blob/main/README-Chinese.md)
+- 切换至 [中文文档](https://github.com/BeardedManZhao/mathematical-expression-cpp/blob/main/README-Chinese.md)
 - [mathematical-expression-Java](https://github.com/BeardedManZhao/mathematical-expression.git)
 - [mathematical-expression-py](https://github.com/BeardedManZhao/mathematical-expression-Py)
 
