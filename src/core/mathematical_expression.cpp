@@ -1,0 +1,12 @@
+//
+// Created by Liming on 2023/6/20.
+//
+#include "mathematical_expression.h"
+
+ME::PrefixExpressionOperation mathematical_expression::getPrefixExpressionOperation() {
+    return mathematical_expression::prefixExpressionOperation;
+}
+
+ME::BracketsCalculationTwo mathematical_expression::getBracketsCalculation2() {
+    return mathematical_expression::bracketsCalculation2;
+}

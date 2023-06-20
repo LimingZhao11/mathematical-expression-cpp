@@ -202,10 +202,6 @@ namespace ME {
         size_t operator()(const CalculationBooleanResults &person) const;
     };
 
-    ostream &operator<<(ostream &out, const CalculationBooleanResults *rhs);
-
-    ostream &operator<<(ostream &out, const CalculationBooleanResults &rhs);
-
     CalculationNumberResults operator+(CalculationNumberResults v1, CalculationNumberResults v2);
 
     CalculationNumberResults operator-(CalculationNumberResults v1, CalculationNumberResults v2);
@@ -217,10 +213,14 @@ namespace ME {
     CalculationNumberResults operator<<(CalculationNumberResults v1, CalculationNumberResults v2);
 
     CalculationNumberResults operator>>(CalculationNumberResults v1, CalculationNumberResults v2);
-
-    ostream &operator<<(ostream &out, const CalculationNumberResults *rhs);
-
-    ostream &operator<<(ostream &out, const CalculationNumberResults &rhs);
 }
+
+ostream &operator<<(ostream &out, const ME::CalculationBooleanResults *rhs);
+
+ostream &operator<<(ostream &out, const ME::CalculationBooleanResults &rhs);
+
+ostream &operator<<(ostream &out, const ME::CalculationNumberResults *rhs);
+
+ostream &operator<<(ostream &out, const ME::CalculationNumberResults &rhs);
 
 #endif //MATHEMATICAL_EXPRESSION_CPP_CALCULATIONRESULTS_H

@@ -26,6 +26,8 @@ class NumberCalculation : public Calculation {
      */
     virtual ME::CalculationNumberResults calculation(std::string Formula, bool formatRequired) = 0;
 
+private:
+
     virtual /**
      * 计算一个数学表达式，并将计算细节与计算结果存储到数值结果集中。
      * <p>

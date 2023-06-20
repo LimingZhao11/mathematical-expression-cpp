@@ -129,6 +129,22 @@ build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCa
   OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
   OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation
 
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/calculation/BracketsCalculationTwo.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\BracketsCalculationTwo.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation
+
+build CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj: CXX_COMPILER__mathematical_expression_cpp_Debug D$:/MyGithub/mathematical-expression-cpp/src/core/mathematical_expression.cpp || cmake_object_order_depends_target_mathematical_expression_cpp
+  DEFINES = -Dmathematical_expression_cpp_EXPORTS
+  DEP_FILE = CMakeFiles\mathematical_expression_cpp.dir\src\core\mathematical_expression.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -ID:/MyGithub/mathematical-expression-cpp/include
+  OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mathematical_expression_cpp.dir\src\core
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target mathematical_expression_cpp
@@ -137,7 +153,7 @@ build CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCa
 #############################################
 # Link the shared library libmathematical_expression_cpp.dll
 
-build libmathematical_expression_cpp.dll libmathematical_expression_cpp.dll.a: CXX_SHARED_LIBRARY_LINKER__mathematical_expression_cpp_Debug CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/exceptional/MExceptional.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/NumberUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/dataContainer/MEStack.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/NumberCalculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj
+build libmathematical_expression_cpp.dll libmathematical_expression_cpp.dll.a: CXX_SHARED_LIBRARY_LINKER__mathematical_expression_cpp_Debug CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/manager/CalculationManagement.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/PrefixExpressionOperation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/exceptional/MExceptional.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/NumberUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/utils/StrUtils.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/dataContainer/MEStack.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/NumberCalculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\mathematical_expression_cpp.dir

@@ -49,6 +49,9 @@ namespace ME {
                 }
                 is = false;
             }
+        } else {
+            string data = "数学表达式的最后一个字符应是一个数值。\nThe last character of a mathematical expression should be a numeric value.\nERROR => ";
+            throw WrongFormat(data + lastChar);
         }
     }
 
