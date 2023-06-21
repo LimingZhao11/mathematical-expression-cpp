@@ -120,6 +120,12 @@
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/include/mathematical_expression.h">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BooleanCalculation.cpp">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
+		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BooleanCalculation.h">
+			<Option target="mathematical_expression_cpp"/>
+		</Unit>
 		<Unit filename="D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BracketsCalculation.cpp">
 			<Option target="mathematical_expression_cpp"/>
 		</Unit>

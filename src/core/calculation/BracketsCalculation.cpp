@@ -3,7 +3,6 @@
 //
 
 #include "BracketsCalculation.h"
-#include "regex"
 #include "ConstantRegion.h"
 #include "Utils.h"
 #include "MExceptional.h"

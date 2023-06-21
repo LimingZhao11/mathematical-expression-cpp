@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj"
+  "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj.d"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj.d"
   "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj"

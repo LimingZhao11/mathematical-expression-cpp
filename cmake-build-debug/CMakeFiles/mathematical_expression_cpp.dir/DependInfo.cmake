@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BooleanCalculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj.d"
   "D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BracketsCalculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj.d"
   "D:/MyGithub/mathematical-expression-cpp/src/core/calculation/BracketsCalculationTwo.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj.d"
   "D:/MyGithub/mathematical-expression-cpp/src/core/calculation/Calculation.cpp" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj" "gcc" "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj.d"

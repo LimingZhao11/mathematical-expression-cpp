@@ -11,8 +11,6 @@
 
 namespace ME {
 
-    static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN = std::regex("\\s+");
-
     /**
      * 括号解析算法计算一个公式的计算组件的父类，其中的计算具体实现是一个抽象，等待实现
      * <p>

@@ -128,6 +128,30 @@ mathematical_expression_cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/build
 .PHONY : mathematical_expression_cpp/fast
 
+src/core/calculation/BooleanCalculation.obj: src/core/calculation/BooleanCalculation.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculation.obj
+
+# target to build an object file
+src/core/calculation/BooleanCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculation.cpp.obj
+
+src/core/calculation/BooleanCalculation.i: src/core/calculation/BooleanCalculation.cpp.i
+.PHONY : src/core/calculation/BooleanCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/BooleanCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.i
+.PHONY : src/core/calculation/BooleanCalculation.cpp.i
+
+src/core/calculation/BooleanCalculation.s: src/core/calculation/BooleanCalculation.cpp.s
+.PHONY : src/core/calculation/BooleanCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/BooleanCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.s
+.PHONY : src/core/calculation/BooleanCalculation.cpp.s
+
 src/core/calculation/BracketsCalculation.obj: src/core/calculation/BracketsCalculation.cpp.obj
 .PHONY : src/core/calculation/BracketsCalculation.obj
 
@@ -425,6 +449,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mathematical_expression_cpp
+	@echo ... src/core/calculation/BooleanCalculation.obj
+	@echo ... src/core/calculation/BooleanCalculation.i
+	@echo ... src/core/calculation/BooleanCalculation.s
 	@echo ... src/core/calculation/BracketsCalculation.obj
 	@echo ... src/core/calculation/BracketsCalculation.i
 	@echo ... src/core/calculation/BracketsCalculation.s

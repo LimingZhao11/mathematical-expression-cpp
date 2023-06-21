@@ -248,6 +248,21 @@ CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.s"
 	D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\MyGithub\mathematical-expression-cpp\src\core\mathematical_expression.cpp -o CMakeFiles\mathematical_expression_cpp.dir\src\core\mathematical_expression.cpp.s
 
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/flags.make
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/includes_CXX.rsp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj: ../src/core/calculation/BooleanCalculation.cpp
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj: CMakeFiles/mathematical_expression_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj"
+	D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj -MF CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\BooleanCalculation.cpp.obj.d -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\BooleanCalculation.cpp.obj -c D:\MyGithub\mathematical-expression-cpp\src\core\calculation\BooleanCalculation.cpp
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.i"
+	D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\MyGithub\mathematical-expression-cpp\src\core\calculation\BooleanCalculation.cpp > CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\BooleanCalculation.cpp.i
+
+CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.s"
+	D:\liming\CX\Clion\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\MyGithub\mathematical-expression-cpp\src\core\calculation\BooleanCalculation.cpp -o CMakeFiles\mathematical_expression_cpp.dir\src\core\calculation\BooleanCalculation.cpp.s
+
 # Object files for target mathematical_expression_cpp
 mathematical_expression_cpp_OBJECTS = \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/container/CalculationResults.cpp.obj" \
@@ -261,7 +276,8 @@ mathematical_expression_cpp_OBJECTS = \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.obj" \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj" \
 "CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj" \
-"CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj"
+"CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj" \
+"CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj"
 
 # External object files for target mathematical_expression_cpp
 mathematical_expression_cpp_EXTERNAL_OBJECTS =
@@ -278,11 +294,12 @@ libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/s
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculation.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BracketsCalculationTwo.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/mathematical_expression.cpp.obj
+libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.obj
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/build.make
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/linklibs.rsp
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/objects1.rsp
 libmathematical_expression_cpp.dll: CMakeFiles/mathematical_expression_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libmathematical_expression_cpp.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libmathematical_expression_cpp.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mathematical_expression_cpp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
