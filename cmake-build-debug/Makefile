@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\MyGithub\mathematical-expression-cpp
+CMAKE_SOURCE_DIR = D:\MyGitHub\mathematical-expression-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
+CMAKE_BINARY_DIR = D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\MyGithub\mathematical-expression-cpp\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\liming\CX\Clion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\Liming\MyApplication\CLion\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGithub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\MyGitHub\mathematical-expression-cpp\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,6 +151,30 @@ src/core/calculation/BooleanCalculation.s: src/core/calculation/BooleanCalculati
 src/core/calculation/BooleanCalculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculation.cpp.s
 .PHONY : src/core/calculation/BooleanCalculation.cpp.s
+
+src/core/calculation/BooleanCalculationTwo.obj: src/core/calculation/BooleanCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculationTwo.obj
+
+# target to build an object file
+src/core/calculation/BooleanCalculationTwo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.obj
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.obj
+
+src/core/calculation/BooleanCalculationTwo.i: src/core/calculation/BooleanCalculationTwo.cpp.i
+.PHONY : src/core/calculation/BooleanCalculationTwo.i
+
+# target to preprocess a source file
+src/core/calculation/BooleanCalculationTwo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.i
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.i
+
+src/core/calculation/BooleanCalculationTwo.s: src/core/calculation/BooleanCalculationTwo.cpp.s
+.PHONY : src/core/calculation/BooleanCalculationTwo.s
+
+# target to generate assembly for a file
+src/core/calculation/BooleanCalculationTwo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/BooleanCalculationTwo.cpp.s
+.PHONY : src/core/calculation/BooleanCalculationTwo.cpp.s
 
 src/core/calculation/BracketsCalculation.obj: src/core/calculation/BracketsCalculation.cpp.obj
 .PHONY : src/core/calculation/BracketsCalculation.obj
@@ -223,6 +247,102 @@ src/core/calculation/Calculation.s: src/core/calculation/Calculation.cpp.s
 src/core/calculation/Calculation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/Calculation.cpp.s
 .PHONY : src/core/calculation/Calculation.cpp.s
+
+src/core/calculation/CalculationConstant.obj: src/core/calculation/CalculationConstant.cpp.obj
+.PHONY : src/core/calculation/CalculationConstant.obj
+
+# target to build an object file
+src/core/calculation/CalculationConstant.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.obj
+.PHONY : src/core/calculation/CalculationConstant.cpp.obj
+
+src/core/calculation/CalculationConstant.i: src/core/calculation/CalculationConstant.cpp.i
+.PHONY : src/core/calculation/CalculationConstant.i
+
+# target to preprocess a source file
+src/core/calculation/CalculationConstant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.i
+.PHONY : src/core/calculation/CalculationConstant.cpp.i
+
+src/core/calculation/CalculationConstant.s: src/core/calculation/CalculationConstant.cpp.s
+.PHONY : src/core/calculation/CalculationConstant.s
+
+# target to generate assembly for a file
+src/core/calculation/CalculationConstant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CalculationConstant.cpp.s
+.PHONY : src/core/calculation/CalculationConstant.cpp.s
+
+src/core/calculation/CumulativeCalculation.obj: src/core/calculation/CumulativeCalculation.cpp.obj
+.PHONY : src/core/calculation/CumulativeCalculation.obj
+
+# target to build an object file
+src/core/calculation/CumulativeCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.obj
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.obj
+
+src/core/calculation/CumulativeCalculation.i: src/core/calculation/CumulativeCalculation.cpp.i
+.PHONY : src/core/calculation/CumulativeCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/CumulativeCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.i
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.i
+
+src/core/calculation/CumulativeCalculation.s: src/core/calculation/CumulativeCalculation.cpp.s
+.PHONY : src/core/calculation/CumulativeCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/CumulativeCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/CumulativeCalculation.cpp.s
+.PHONY : src/core/calculation/CumulativeCalculation.cpp.s
+
+src/core/calculation/FunctionFormulaCalculation.obj: src/core/calculation/FunctionFormulaCalculation.cpp.obj
+.PHONY : src/core/calculation/FunctionFormulaCalculation.obj
+
+# target to build an object file
+src/core/calculation/FunctionFormulaCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.obj
+.PHONY : src/core/calculation/FunctionFormulaCalculation.cpp.obj
+
+src/core/calculation/FunctionFormulaCalculation.i: src/core/calculation/FunctionFormulaCalculation.cpp.i
+.PHONY : src/core/calculation/FunctionFormulaCalculation.i
+
+# target to preprocess a source file
+src/core/calculation/FunctionFormulaCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.i
+.PHONY : src/core/calculation/FunctionFormulaCalculation.cpp.i
+
+src/core/calculation/FunctionFormulaCalculation.s: src/core/calculation/FunctionFormulaCalculation.cpp.s
+.PHONY : src/core/calculation/FunctionFormulaCalculation.s
+
+# target to generate assembly for a file
+src/core/calculation/FunctionFormulaCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionFormulaCalculation.cpp.s
+.PHONY : src/core/calculation/FunctionFormulaCalculation.cpp.s
+
+src/core/calculation/FunctionManager.obj: src/core/calculation/FunctionManager.cpp.obj
+.PHONY : src/core/calculation/FunctionManager.obj
+
+# target to build an object file
+src/core/calculation/FunctionManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionManager.cpp.obj
+.PHONY : src/core/calculation/FunctionManager.cpp.obj
+
+src/core/calculation/FunctionManager.i: src/core/calculation/FunctionManager.cpp.i
+.PHONY : src/core/calculation/FunctionManager.i
+
+# target to preprocess a source file
+src/core/calculation/FunctionManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionManager.cpp.i
+.PHONY : src/core/calculation/FunctionManager.cpp.i
+
+src/core/calculation/FunctionManager.s: src/core/calculation/FunctionManager.cpp.s
+.PHONY : src/core/calculation/FunctionManager.s
+
+# target to generate assembly for a file
+src/core/calculation/FunctionManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mathematical_expression_cpp.dir\build.make CMakeFiles/mathematical_expression_cpp.dir/src/core/calculation/FunctionManager.cpp.s
+.PHONY : src/core/calculation/FunctionManager.cpp.s
 
 src/core/calculation/NumberCalculation.obj: src/core/calculation/NumberCalculation.cpp.obj
 .PHONY : src/core/calculation/NumberCalculation.obj
@@ -452,6 +572,9 @@ help:
 	@echo ... src/core/calculation/BooleanCalculation.obj
 	@echo ... src/core/calculation/BooleanCalculation.i
 	@echo ... src/core/calculation/BooleanCalculation.s
+	@echo ... src/core/calculation/BooleanCalculationTwo.obj
+	@echo ... src/core/calculation/BooleanCalculationTwo.i
+	@echo ... src/core/calculation/BooleanCalculationTwo.s
 	@echo ... src/core/calculation/BracketsCalculation.obj
 	@echo ... src/core/calculation/BracketsCalculation.i
 	@echo ... src/core/calculation/BracketsCalculation.s
@@ -461,6 +584,18 @@ help:
 	@echo ... src/core/calculation/Calculation.obj
 	@echo ... src/core/calculation/Calculation.i
 	@echo ... src/core/calculation/Calculation.s
+	@echo ... src/core/calculation/CalculationConstant.obj
+	@echo ... src/core/calculation/CalculationConstant.i
+	@echo ... src/core/calculation/CalculationConstant.s
+	@echo ... src/core/calculation/CumulativeCalculation.obj
+	@echo ... src/core/calculation/CumulativeCalculation.i
+	@echo ... src/core/calculation/CumulativeCalculation.s
+	@echo ... src/core/calculation/FunctionFormulaCalculation.obj
+	@echo ... src/core/calculation/FunctionFormulaCalculation.i
+	@echo ... src/core/calculation/FunctionFormulaCalculation.s
+	@echo ... src/core/calculation/FunctionManager.obj
+	@echo ... src/core/calculation/FunctionManager.i
+	@echo ... src/core/calculation/FunctionManager.s
 	@echo ... src/core/calculation/NumberCalculation.obj
 	@echo ... src/core/calculation/NumberCalculation.i
 	@echo ... src/core/calculation/NumberCalculation.s

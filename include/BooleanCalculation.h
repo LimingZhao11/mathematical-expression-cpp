@@ -4,10 +4,12 @@
 
 #ifndef MATHEMATICAL_EXPRESSION_CPP_BOOLEANCALCULATION_H
 #define MATHEMATICAL_EXPRESSION_CPP_BOOLEANCALCULATION_H
+
 #include "Calculation.h"
 #include "CalculationResults.h"
+
 namespace ME {
-    class BooleanCalculation : public Calculation{
+    class BooleanCalculation : public Calculation {
     public:
         std::string formatStr(std::string string) override;
 
@@ -19,7 +21,7 @@ namespace ME {
 
         std::string getName() override;
 
-        virtual CalculationBooleanResults calculation(std::string Formula, std::string formatRequired) = 0;
+        virtual CalculationBooleanResults calculation(std::string Formula, bool formatRequired) = 0;
 
     };
 }

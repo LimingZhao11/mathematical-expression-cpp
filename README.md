@@ -27,7 +27,7 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(MyCpp main.cpp)
 # Link to the project (link the library to the compiled target)
-target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\mathematical_expression_cpp.dll)
+target_link_libraries(${PROJECT_NAME} D:\\liming\\Project\\Clion\\MyCpp\\cmake-build-debug\\libmathematical_expression_cpp.dll)
 ```
 
 After the integration operation is completed, you can try to enter the following code to determine whether the function
@@ -190,6 +190,232 @@ int main(){
 ```
 Active code page: 65001
 计算层数：2     计算结果：31    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
+### Interval accumulation expression
+
+- Full class name：ME::CumulativeCalculation
+- introduce
+
+  In mathematical expressions, there is often such a formula. The content of the formula is shown in the following
+  figure. You can see the number sequence operations that need to be accumulated.
+
+  Then, you can use the Full class name above to achieve the purpose you need.
+
+  ![img_1](https://user-images.githubusercontent.com/113756063/201575828-5b76af88-6040-430d-a54c-61faf5905594.png)
+
+- API Usage Example
+
+  The syntax level is almost the same as that of other components. The calculation example of the mathematical
+  expression written in the component is shown below. What is shown here is the calculation of an accumulative
+  mathematical formula.
+
+```c++
+#include "mathematical_expression.h"
+int main() {
+    system("chcp 65001");
+    // Create a mathematical expression parsing library object
+    mathematical_expression me;
+    // Obtain a component for calculating cumulative mathematical expressions
+    ME::CumulativeCalculation cumulativeCalculation = me.getCumulativeCalculation();
+    // Construct a mathematical expression where 'n [1,10,1]' is similar to the accumulation symbol in mathematics. n will continue to increase within this interval, and each increase will be carried into the formula for calculation once
+    // The last 1 in [1,10,1] represents an increase in step size, which can achieve the accumulation of different equivalences within the interval
+    string s = "n[1,10,1] 2 * (n + 1)";
+    // Check mathematical expressions
+    cumulativeCalculation.check(s);
+    // Calculation results
+    ME::CalculationNumberResults results = cumulativeCalculation << s;
+    // Print out the results
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+Active code page: 65001
+计算层数：11    计算结果：130   计算来源：CumulativeCalculation
+
+进程已结束,退出代码0
+```
+
+### Function operation expression
+
+- Full class name：ME::FunctionFormulaCalculation
+- introduce
+
+  The framework also supports the operation of some functions. You can use the above classes to write mathematical
+  expressions that require functions. It should be noted that all functions used in expressions need to be logically
+  registered in "Calculation Management" so that functions can be accessed during calculation
+- API Usage Example
+
+```c++
+#include <mathematical_expression.h>
+#include "FunctionManager.h"
+int main() {
+    system("chcp 65001");
+    // 准备函数 这里的函数的作用是将参数 * 2
+    auto myFun = [](const double *v) {
+        return *v * 2;
+    };
+    // 注册函数 将我们的函数注册成为 DoubleValue 的名称
+    ME::FunctionManager::append("DoubleValue", myFun);
+    // 构建一个数学表达式，表达式中使用到了函数 DoubleValue
+    string s = "2 * DoubleValue(2 + 3) + 1";
+    // 获取到 数学表达式解析库
+    mathematical_expression me;
+    // 获取到函数表达式计算组件
+    auto functionFormulaCalculation = me.getFunctionFormulaCalculation();
+    // 检查数学表达式
+    functionFormulaCalculation.check(s);
+    // 计算出结果
+    ME::CalculationNumberResults results = functionFormulaCalculation << s;
+    // 将结果打印出来
+    cout << "计算层数：" << results.getResultLayers() << "\t计算结果：" << results << "\t计算来源：" << results.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+Active code page: 65001
+计算层数：1     计算结果：21    计算来源：BracketsCalculation
+
+进程已结束,退出代码0
+```
+
+## C++API characteristic
+
+In C++, libraries have faster parsing and computation speeds, while also having larger functionalities. Next, we will
+provide an explanation of the unique features in C++.
+
+### Calculation operations between operands
+
+The result object calculated by the calculation component also has calculation function, which can be used to perform
+calculation operations between multiple operands based on this method. The following is an example.
+
+```c++
+#include <mathematical_expression.h>
+
+int main() {
+    // Prepare mathematical expression objects
+    mathematical_expression me;
+    // Print out the version number of the mathematical expression library
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // Prepare mathematical expressions to be evaluated
+    std::string f = "1 + (3 - 2) + 10";
+    // Prepare calculation components
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // Start calculation
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // Using Result Objects for Calculations
+    ME::CalculationNumberResults res2 = res1 + res1;
+    std::cout << "res1 + res1 = " << res2 << "\t其结果的源 = " << res2.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+1.0.1-mathematical_expression-C++
+res1 + res1 = 24        其结果的源 = (BracketsCalculation + BracketsCalculation)
+
+进程已结束,退出代码0
+```
+
+### Alias operations in operands
+
+After the calculation of the calculation component, the operand contains the type name of the calculation component.
+However, in C++, due to the calculation characteristics between operands, the source name becomes very confusing.
+Therefore, the following operation can be used to distinguish names, which can achieve good results.
+
+Next is a basic example of alias operations
+
+```c++
+#include <mathematical_expression.h>
+
+int main() {
+    // Prepare mathematical expression objects
+    mathematical_expression me;
+    // Print out the version number of the mathematical expression library
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // Prepare mathematical expressions to be evaluated
+    std::string f = "1 + (3 - 2) + 10";
+    // Prepare calculation components
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // Start calculation
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // Print the source name of the result object
+    std::cout << res1.getCalculationSourceName() << endl;
+    // Set alias for res1
+    res1.as("res1");
+    // Print the source name of the result object
+    std::cout << res1.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+1.0.0-mathematical_expression-C++
+BracketsCalculation
+res1
+
+进程已结束,退出代码0
+
+```
+
+Next is an interesting case study on alias operations (calculation between operands+aliases)
+
+```c++
+#include <mathematical_expression.h>
+
+int main() {
+    // Prepare mathematical expression objects
+    mathematical_expression me;
+    // Print out the version number of the mathematical expression library
+    std::cout << mathematical_expression::getVERSION() << endl;
+    // Prepare mathematical expressions to be evaluated
+    std::string f = "1 + (3 - 2) + 10";
+    // Prepare calculation components
+    ME::BracketsCalculationTwo bracketsCalculationTwo = me.getBracketsCalculation2();
+
+    // Start calculation
+    ME::CalculationNumberResults res1 = bracketsCalculationTwo << f;
+    // Set alias for res1
+    res1.as("res1");
+    std::cout << res1 << endl;
+
+    // Calculate res2
+    ME::CalculationNumberResults res2 = res1 + res1;
+    // Setting an alias for res2
+    res2.as("res2");
+    std::cout << res2 << endl;
+    std::cout << res2.getCalculationSourceName() << endl;
+
+    // Calculate res3 and use the operation between the result objects here, where res3=res2- res1
+    ME::CalculationNumberResults res3 = res2 - res1;
+    std::cout << '[' << res3  << ']' << '\t' << res3.getCalculationSourceName() << endl;
+
+    // Calculate res4 using the operation between the result objects here, where res4=res3 * res1=(res2- res1) * res1
+    ME::CalculationNumberResults res4 = res3 * res1;
+    std::cout  << '[' << res4 << ']' << '\t' << res4.getCalculationSourceName() << endl;
+}
+```
+
+- Running results
+
+```
+1.0.0-mathematical_expression-C++
+12
+24
+res2
+[12]    (res2 - res1)
+[144]   ((res2 - res1) * res1)
 
 进程已结束,退出代码0
 ```

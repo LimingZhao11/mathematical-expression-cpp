@@ -7,8 +7,11 @@
 
 #include "PrefixExpressionOperation.h"
 #include "BracketsCalculationTwo.h"
+#include "BooleanCalculationTwo.h"
+#include "CumulativeCalculation.h"
+#include "FunctionFormulaCalculation.h"
 
-#define VERSION "1.0.0-mathematical_expression-C++";
+#define VERSION "1.0.1-mathematical_expression-C++";
 
 /**
  * 数学表达式解析计算库中的门户类，由该类获取到数学表达式计算库中的相关数据对象。
@@ -19,6 +22,9 @@ class mathematical_expression {
 protected:
     ME::PrefixExpressionOperation prefixExpressionOperation;
     ME::BracketsCalculationTwo bracketsCalculation2;
+    ME::BooleanCalculationTwo booleanCalculation2;
+    ME::CumulativeCalculation cumulativeCalculation;
+    ME::FunctionFormulaCalculation functionFormulaCalculation;
 public:
 
     /**
@@ -46,6 +52,31 @@ public:
      * Mathematical expression calculation component, which can parse and evaluate an expression with parentheses.
      */
     ME::BracketsCalculationTwo getBracketsCalculation2();
+
+    /**
+     *
+     * @return 比较运算数学表达式计算组件，该组件能够解析并计算一个不等或等式是否成立。
+     *
+     * Compare the Computational mathematics expression calculation component, which can analyze and calculate whether an inequality or equality is true.
+     */
+    ME::BooleanCalculationTwo getBooleanCalculation2();
+
+    /**
+     *
+     * @return 区间累加数学表达式解析计算组件，该组件能够实现按照一定等差的数列求和的方式进行公式的计算操作。
+     *
+     * Interval accumulation mathematical expression analysis and calculation component, which can perform formula calculation operations by summing a certain sequence of equal differences.
+     */
+    ME::CumulativeCalculation getCumulativeCalculation();
+
+    /**
+     *
+     * @return 函数数学表达式计算组件，该组件能够解析一个引用了函数的表达式，能够有效的实现自定义计算函数的效果。
+     *
+     * Function mathematical expression calculation component, which can parse an expression that references a function and effectively achieve the effect of custom calculation functions.
+     */
+    ME::FunctionFormulaCalculation getFunctionFormulaCalculation();
+
 };
 
 

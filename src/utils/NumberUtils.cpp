@@ -33,6 +33,15 @@ namespace NumberUtils {
     }
 
     /**
+     * 计算一个数值的绝对值
+     * @param x 需要被计算的数值
+     * @return 被计算数值的绝对值
+     */
+    int absoluteValue(int x) {
+        return abs(x);
+    }
+
+    /**
      * 将两个操作符级别进行比较
      *
      * @param s1 操作符1
@@ -70,6 +79,34 @@ namespace NumberUtils {
                 throw ME::AbnormalOperation(data.append(+"]\n").append(
                                 &"Operand calculation exception. Your calculation mode does not exist. Wrong calculation mode = ["[CalculationType])
                                                     .append("]"));
+        }
+    }
+
+    bool ComparisonOperation(const std::string &ComparisonOperator, double left, double right) {
+        {
+            if (std::equal(LESS_THAN_SIGN.begin(), LESS_THAN_SIGN.end(), ComparisonOperator.begin()))
+                return left < right;
+            else if (std::equal(GREATER_THAN_SIGN.begin(), GREATER_THAN_SIGN.end(), ComparisonOperator.begin()))
+                return left > right;
+            else if (std::equal(LESS_THAN_OR_EQUAL_TO_SIGN.begin(), LESS_THAN_OR_EQUAL_TO_SIGN.end(),
+                                ComparisonOperator.begin()))
+                return left <= right;
+            else if (std::equal(GREATER_THAN_OR_EQUAL_TO_SIGN.begin(), GREATER_THAN_OR_EQUAL_TO_SIGN.end(),
+                                ComparisonOperator.begin()))
+                return left >= right;
+            else if (std::equal(EQUAL_SIGN1.begin(), EQUAL_SIGN1.end(), ComparisonOperator.begin()) ||
+                     std::equal(EQUAL_SIGN2.begin(), EQUAL_SIGN2.end(), ComparisonOperator.begin()))
+                return left == right;
+            else if (std::equal(NOT_EQUAL_SIGN1.begin(), NOT_EQUAL_SIGN1.end(), ComparisonOperator.begin()) ||
+                     std::equal(NOT_EQUAL_SIGN2.begin(), NOT_EQUAL_SIGN2.end(), ComparisonOperator.begin()))
+                return left != right;
+            else {
+                std::string data = "无法进行比较运算，因为有错误的运算符。\n";
+                data.append("The comparison operation cannot be performed because there is an incorrect operator.\n")
+                        .append("Bad comparison operator => ")
+                        .append(ComparisonOperator);
+                throw ME::AbnormalOperation(data);
+            }
         }
     }
 }

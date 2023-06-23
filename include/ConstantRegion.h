@@ -8,7 +8,6 @@
 #include "string"
 #include "regex"
 
-const float VERSION = 1.22F; // 更新版本，修复错误，于2023-02-25上传新版本
 const std::string STRING_NULL = "null";
 const char LEFT_BRACKET = '(';
 const char RIGHT_BRACKET = ')';
@@ -47,11 +46,12 @@ const std::string LOG_INFO_FIND_FUNCTION = "Find and prepare the startup functio
 const std::string LOG_INFO_REGISTER_COMPONENT = "A computing component is registered ";
 const std::string LOG_INFO_register_FUNCTION = "A function is registered ";
 const std::string LOG_INFO_UNREGISTER_COMPONENT = "Preparing to unregister the compute component. Component name:";
-const std::string LOG_INFO_UNREGISTER_FUNCTION = "Prepare the logoff of a function. Function name:";
+const std::string LOG_INFO_UNREGISTER_FUNCTION = "Prepare the logoff of a function. FunctionManager name:";
 const std::string LOG_INFO_SHARED_POOL = "Use shared pool data. The identity of the data is: ";
 
 namespace ME {
-    static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN = std::regex("\\s+");
-    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN = std::regex(ConstantRegion.REGULAR_COMPARISON_OPERATOR);
+    static const std::regex ALL_INVISIBLE_CHARACTERS_PATTERN("\\s+");
+    static const std::regex REGULAR_COMPARISON_OPERATOR_PATTERN(REGULAR_COMPARISON_OPERATOR);
+    static const std::regex INTERVAL_EXTRACTION_PATTERN("[\\[\\]]");
 }
 #endif //MATHEMATICAL_EXPRESSION_CPP_CONSTANTREGION_H
